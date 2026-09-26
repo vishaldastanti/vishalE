@@ -1,0 +1,1729 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishal Enterprises | Manufacturer of Premium Ready-Made Garments</title>
+    <!-- Favicon: use uploaded logoE if present, fallback to inline SVG -->
+    <link rel="icon" href="logoE.jpeg" type="image/jpeg">
+    <link rel="icon"
+        href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231E3A8A' width='100' height='100'/><text x='50' y='62' font-size='46' text-anchor='middle' fill='white' font-family='Bricolage Grotesque, Arial' font-weight='700'>VE</text></svg>">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Bricolage Grotesque & Plus Jakarta Sans / Inter Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Bricolage Grotesque"', 'sans-serif'],
+                        heading: ['"Bricolage Grotesque"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            navy: '#1E3A8A',       /* Primary Navy Blue */
+                            orange: '#F97316',     /* Accent Orange */
+                            bg: '#F8FAFC',         /* Off-white light background */
+                            black: '#09090B',       /* Sharp dark headings */
+                            dark: '#111827',
+                            muted: '#64748B',
+                            border: '#E2E8F0',
+                        }
+                    },
+                    boxShadow: {
+                        'pill': '0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03)',
+                        'card': '0 20px 40px -15px rgba(15, 23, 42, 0.07)',
+                        'floating': '0 25px 50px -12px rgba(0, 0, 0, 0.15)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Apply site typeface to common UI elements but do not override icon fonts */
+        body,
+        input,
+        textarea,
+        button,
+        select,
+        label,
+        p,
+        a,
+        div,
+        span,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Bricolage Grotesque', sans-serif;
+        }
+
+        body {
+            background-color: #F8FAFC;
+            color: #09090B;
+        }
+
+        .pill-nav {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+        }
+
+        .badge-pill {
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #F8FAFC;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+            border-radius: 9999px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1E3A8A;
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased text-brand-black bg-brand-bg overflow-x-hidden">
+
+    <!-- Floating Glass Navigation Header -->
+    <header class="fixed top-4 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8">
+        <div
+            class="max-w-7xl mx-auto flex items-center justify-between h-16 px-4 sm:px-6 rounded-full pill-nav shadow-pill">
+
+            <!-- Company logoE -->
+            <a href="#home" class="flex items-center space-x-3 group">
+                <div
+                    class="w-10 h-10  overflow-hidden rounded-full shadow-md group-hover:scale-105 transition-transform">
+                    <img src="logoE.jpeg" alt="Vishal Enterprises" class="w-full h-full object-contain">
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-extrabold text-base tracking-tight text-brand-black leading-none">Vishal <span
+                            class="text-brand-orange">Enterprises</span></span>
+                    <span class="text-[9px] text-brand-muted tracking-wider uppercase font-semibold mt-0.5">Garment Mfg
+                        • Patna, Bihar</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu Links -->
+            <nav
+                class="hidden md:flex items-center space-x-1 lg:space-x-2 text-xs font-semibold text-slate-600 bg-slate-100/80 p-1.5 rounded-full border border-slate-200/60">
+                <a href="#home"
+                    class="px-4 py-1.5 rounded-full bg-white text-brand-black shadow-sm transition-all">Home</a>
+                <a href="#about"
+                    class="px-4 py-1.5 rounded-full hover:text-brand-black hover:bg-white/60 transition-all">About
+                    Us</a>
+                <a href="#products"
+                    class="px-4 py-1.5 rounded-full hover:text-brand-black hover:bg-white/60 transition-all">Products</a>
+                <a href="#manufacturing"
+                    class="px-4 py-1.5 rounded-full hover:text-brand-black hover:bg-white/60 transition-all">Manufacturing</a>
+                <a href="#why-choose-us"
+                    class="px-4 py-1.5 rounded-full hover:text-brand-black hover:bg-white/60 transition-all">Why Us</a>
+                <a href="#gallery"
+                    class="px-4 py-1.5 rounded-full hover:text-brand-black hover:bg-white/60 transition-all">Gallery</a>
+                <a href="#contact"
+                    class="px-4 py-1.5 rounded-full hover:text-brand-black hover:bg-white/60 transition-all">Contact</a>
+            </nav>
+
+            <!-- Action Button & Mobile Toggle -->
+            <div class="flex items-center space-x-3">
+                <button onclick="openModal('General Bulk Quote')"
+                    class="hidden sm:inline-flex items-center space-x-2 bg-brand-navy hover:bg-blue-900 text-white text-xs font-bold px-5 py-2.5 rounded-full transition-all shadow-md hover:scale-105">
+                    <span>Send Enquiry</span>
+                    <svg class="w-3 h-3 text-brand-orange inline-block" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+
+                <!-- Mobile Navigation Toggle Button -->
+                <button id="mobile-btn" onclick="toggleMobileMenu()"
+                    class="md:hidden text-slate-800 p-2 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation Overlay -->
+        <div id="mobile-menu"
+            class="hidden md:hidden max-w-6xl mx-auto mt-2 bg-white rounded-3xl p-6 shadow-2xl border border-slate-200 transition-all">
+            <div class="flex flex-col space-y-3 font-semibold text-sm">
+                <a href="#home" onclick="toggleMobileMenu()"
+                    class="px-4 py-2 rounded-xl bg-slate-100 text-brand-black">Home</a>
+                <a href="#about" onclick="toggleMobileMenu()"
+                    class="px-4 py-2 rounded-xl hover:bg-slate-50 text-slate-600">About Us</a>
+                <a href="#products" onclick="toggleMobileMenu()"
+                    class="px-4 py-2 rounded-xl hover:bg-slate-50 text-slate-600">Products Catalog</a>
+                <a href="#manufacturing" onclick="toggleMobileMenu()"
+                    class="px-4 py-2 rounded-xl hover:bg-slate-50 text-slate-600">Manufacturing Process</a>
+                <a href="#why-choose-us" onclick="toggleMobileMenu()"
+                    class="px-4 py-2 rounded-xl hover:bg-slate-50 text-slate-600">Why Choose Us</a>
+                <a href="#gallery" onclick="toggleMobileMenu()"
+                    class="px-4 py-2 rounded-xl hover:bg-slate-50 text-slate-600">Gallery</a>
+                <a href="#contact" onclick="toggleMobileMenu()"
+                    class="px-4 py-2 rounded-xl hover:bg-slate-50 text-slate-600">Contact Us</a>
+                <button onclick="openModal('Mobile Quick Quote'); toggleMobileMenu();"
+                    class="w-full mt-2 bg-brand-navy text-white py-3 rounded-full font-bold text-center">
+                    Send Enquiry &rarr;
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HOME PAGE HERO -->
+    <section id="home" class="pt-32 sm:pt-40 pb-20 md:pb-28 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+
+            <!-- Hero Status Pill Tag -->
+            <div class="inline-flex items-center space-x-2 badge-pill px-4 py-2 rounded-full mb-8 cursor-pointer hover:scale-105 transition-transform"
+                onclick="scrollToSection('manufacturing')">
+                <span class="w-2.5 h-2.5 rounded-full bg-brand-orange animate-pulse"></span>
+                <span class="text-xs font-bold text-slate-800">Leading Garment Manufacturer in Bihar, India</span>
+                <span class="text-xs font-extrabold text-brand-navy flex items-center space-x-1">
+                    <span>OEM & Bulk Orders</span>
+                    <i class="fa-solid fa-chevron-right text-[10px] ml-1"></i>
+                </span>
+            </div>
+
+            <!-- Hero Headline -->
+            <h1
+                class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-brand-black leading-[1.08] mb-6">
+                Vishal <span class="text-[#09090B]">Enterprises</span> – Premium Ready-Made Garments Manufacturer
+            </h1>
+
+            <!-- Hero Subtext -->
+            <p class="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto font-normal leading-relaxed mb-9">
+                Delivering high-capacity garment manufacturing for wholesalers, retailers, private labels, and corporate
+                orders with stringent quality control, custom branding, and fast dispatch across India.
+            </p>
+
+            <!-- Hero Call to Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-14">
+                <button onclick="openModal('Hero Primary Quote')"
+                    class="w-full sm:w-auto bg-brand-navy hover:bg-blue-900 text-white font-bold text-sm px-7 py-4 rounded-full shadow-xl transition-all hover:scale-105 flex items-center justify-center space-x-2">
+                    <span>Get Bulk Quote</span>
+                    <svg class="w-3 h-3 text-brand-orange inline-block" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <a href="https://wa.me/919608446269?text=Hello%20Vishal%20Enterprises%2C%20I%20am%20interested%20in%20bulk%20ready-made%20garments%20manufacturing.%20Please%20share%20catalog%20and%20rates."
+                    target="_blank"
+                    class="w-full sm:w-auto bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm px-7 py-4 rounded-full shadow-lg transition-all hover:scale-105 flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Quick WhatsApp Enquiry</span>
+                </a>
+                <a href="#products"
+                    class="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold text-sm px-7 py-4 rounded-full transition-all shadow-sm flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-layer-group text-xs text-brand-navy"></i>
+                    <span>Products Catalog</span>
+                </a>
+            </div>
+
+            <!-- Social Proof Bar -->
+            <div
+                class="inline-flex flex-wrap items-center justify-center gap-3 sm:gap-4 bg-white px-6 py-3 rounded-full border border-slate-200/80 shadow-sm">
+                <div class="flex -space-x-2">
+                    <img class="w-7 h-7 rounded-full border-2 border-white object-cover"
+                        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"
+                        alt="Client">
+                    <img class="w-7 h-7 rounded-full border-2 border-white object-cover"
+                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80"
+                        alt="Client">
+                    <img class="w-7 h-7 rounded-full border-2 border-white object-cover"
+                        src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&auto=format&fit=crop&q=80"
+                        alt="Client">
+                </div>
+                <span class="text-xs font-bold text-slate-800">Trusted by 100+ Wholesalers & Retail Brands</span>
+                <span class="text-slate-300 text-xs hidden sm:inline">•</span>
+                <span
+                    class="text-xs font-extrabold text-brand-navy bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+                    5,000+ Pcs Daily Output
+                </span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- STATISTICS COUNTER BAR -->
+    <section class="py-10 bg-white border-y border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4 rounded-2xl bg-slate-50/50 border border-slate-100">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">10+ Years</div>
+                    <div class="text-xs sm:text-sm text-slate-500 font-semibold mt-1">Industry Experience</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-slate-50/50 border border-slate-100">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-brand-black tracking-tight">5,000+</div>
+                    <div class="text-xs sm:text-sm text-slate-500 font-semibold mt-1">Daily Garment Capacity</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-slate-50/50 border border-slate-100">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">100+</div>
+                    <div class="text-xs sm:text-sm text-slate-500 font-semibold mt-1">Wholesale Partners</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-slate-50/50 border border-slate-100">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-brand-black tracking-tight">99.8%</div>
+                    <div class="text-xs sm:text-sm text-slate-500 font-semibold mt-1">On-Time Bulk Dispatch</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: ABOUT US (STORY, MISSION, VISION, INFRASTRUCTURE & TEAM) -->
+    <section id="about" class="py-20 md:py-28 bg-brand-bg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+
+            <!-- Company Overview & Story -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span
+                        class="text-xs font-bold uppercase tracking-widest text-brand-navy bg-blue-50 px-3 py-1 rounded-full border border-blue-100">Our
+                        Story & Legacy</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-black tracking-tight">
+                        Pioneering Modern Apparel Manufacturing in Bihar
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        Founded with a vision to redefine ready-made garment manufacturing, <strong>Vishal
+                            Enterprises</strong> has grown into a high-capacity apparel production power in Patna,
+                        Bihar. We specialise in full-package OEM/ODM garment manufacturing—spanning initial design
+                        interpretation, pattern development, fabric sourcing, cutting, precision stitching, printing,
+                        embroidery, and dispatch.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        Our facility serves B2B wholesale distributors, online private label brands, corporate
+                        organizations, and retail garment chains looking for premium fabric feel, consistent sizing, and
+                        dependable volume fulfillment.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="relative bg-white p-3 rounded-3xl border border-slate-200 shadow-card">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
+                            alt="Factory Floor" class="rounded-2xl w-full h-80 object-cover"
+                            onerror="this.src='https://placehold.co/800x600/1E3A8A/FFFFFF?text=Vishal+Enterprises+Factory'">
+                        <div
+                            class="absolute -bottom-4 -left-4 bg-brand-navy text-white p-4 rounded-2xl shadow-lg border border-blue-800 max-w-xs">
+                            <p class="text-[10px] font-bold text-brand-orange uppercase">Modern Industrial Hub</p>
+                            <p class="text-xs font-semibold">100+ High-speed motorized sewing stations & laser cutting
+                                machinery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission, Vision, Team & Infrastructure Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <div
+                    class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-card transition-all">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-blue-50 text-brand-navy flex items-center justify-center font-bold text-base mb-4">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-brand-black mb-2">Our Mission</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">To manufacture world-class ready-made garments
+                        with unmatched stitch precision, bio-wash comfort, and transparent wholesale rates.</p>
+                </div>
+
+                <div
+                    class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-card transition-all">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-orange-50 text-brand-orange flex items-center justify-center font-bold text-base mb-4">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-brand-black mb-2">Our Vision</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">To become Eastern India's benchmark OEM garment
+                        manufacturing hub for national retail chains and international private labels.</p>
+                </div>
+
+                <div
+                    class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-card transition-all">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-slate-100 text-slate-900 flex items-center justify-center font-bold text-base mb-4">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-brand-black mb-2">State-of-the-Art Infrastructure</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Equipped with computerized spreading tables,
+                        multi-head embroidery machines, DTG/screen printers, and steam finishing lines.</p>
+                </div>
+
+                <div
+                    class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-card transition-all">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-base mb-4">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-brand-black mb-2">Expert Tailors & Team</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Backed by 50+ master craftsmen, pattern designers,
+                        and quality auditors supervising every single batch.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 3: PRODUCTS CATALOG -->
+    <section id="products" class="py-20 md:py-28 bg-white border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span
+                    class="text-xs font-bold uppercase tracking-widest text-brand-navy bg-blue-50 px-3 py-1 rounded-full border border-blue-100">Products
+                    Catalog</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-black tracking-tight mt-3">Comprehensive
+                    Ready-Made Garment Range</h2>
+                <p class="text-slate-600 mt-2 text-sm">Full OEM garment manufacturing for T-Shirts, Shirts, Lowers,
+                    Pants, Trousers, Jackets & Custom Wear.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mb-10">
+                <button onclick="filterCat('all', this)"
+                    class="prod-tab bg-brand-navy text-white font-bold px-5 py-2 rounded-full text-xs transition-all shadow-sm">All
+                    Categories</button>
+                <button onclick="filterCat('tshirts', this)"
+                    class="prod-tab bg-slate-100 text-slate-700 hover:bg-slate-200 font-semibold px-5 py-2 rounded-full text-xs transition-all">T-Shirts</button>
+                <button onclick="filterCat('shirts', this)"
+                    class="prod-tab bg-slate-100 text-slate-700 hover:bg-slate-200 font-semibold px-5 py-2 rounded-full text-xs transition-all">Shirts</button>
+                <button onclick="filterCat('lowers', this)"
+                    class="prod-tab bg-slate-100 text-slate-700 hover:bg-slate-200 font-semibold px-5 py-2 rounded-full text-xs transition-all">Lowers</button>
+                <button onclick="filterCat('pants', this)"
+                    class="prod-tab bg-slate-100 text-slate-700 hover:bg-slate-200 font-semibold px-5 py-2 rounded-full text-xs transition-all">Pants</button>
+                <button onclick="filterCat('trousers', this)"
+                    class="prod-tab bg-slate-100 text-slate-700 hover:bg-slate-200 font-semibold px-5 py-2 rounded-full text-xs transition-all">Trousers</button>
+                <button onclick="filterCat('jackets', this)"
+                    class="prod-tab bg-slate-100 text-slate-700 hover:bg-slate-200 font-semibold px-5 py-2 rounded-full text-xs transition-all">Jackets
+                    & Hoodies</button>
+                <button onclick="filterCat('others', this)"
+                    class="prod-tab bg-slate-100 text-slate-700 hover:bg-slate-200 font-semibold px-5 py-2 rounded-full text-xs transition-all">Others
+                    / Custom</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Product Card 1: T-Shirts -->
+                <div
+                    class="prod-card tshirts bg-brand-bg rounded-3xl overflow-hidden border border-slate-200 p-4 flex flex-col justify-between hover:shadow-card transition-all">
+                    <div>
+                        <div class="relative h-64 rounded-2xl overflow-hidden bg-slate-200 mb-4">
+                            <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80"
+                                alt="T-Shirts" class="w-full h-full object-cover"
+                                onerror="this.src='https://placehold.co/600x600/1E3A8A/FFFFFF?text=T-Shirts'">
+                            <span
+                                class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-brand-navy text-[10px] font-extrabold px-3 py-1 rounded-full uppercase">Cotton
+                                • Oversized • Polo</span>
+                        </div>
+                        <span class="text-[11px] font-extrabold text-brand-navy uppercase tracking-wider">Garment
+                            Category</span>
+                        <h3 class="text-lg font-extrabold text-brand-black mt-1">Premium T-Shirts</h3>
+                        <p class="text-xs text-slate-500 mt-1">Bio-washed round neck, oversized drop-shoulder & polo
+                            collar t-shirts.</p>
+
+                        <div class="mt-4 space-y-2 text-xs border-t border-slate-200/80 pt-3">
+                            <div class="flex justify-between"><span class="font-semibold text-slate-500">Fabric:</span>
+                                <span class="font-bold text-slate-900">100% Combed Cotton (180-240 GSM)</span>
+                            </div>
+                            <div class="flex justify-between"><span class="font-semibold text-slate-500">Sizes:</span>
+                                <span class="font-bold text-slate-900">S, M, L, XL, XXL</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-semibold text-slate-500">Colors:</span>
+                                <div class="flex space-x-1.5">
+                                    <span class="w-3.5 h-3.5 rounded-full bg-black border border-slate-300"
+                                        title="Black"></span>
+                                    <span class="w-3.5 h-3.5 rounded-full bg-white border border-slate-300"
+                                        title="White"></span>
+                                    <span class="w-3.5 h-3.5 rounded-full bg-blue-900 border border-slate-300"
+                                        title="Navy"></span>
+                                    <span class="w-3.5 h-3.5 rounded-full bg-red-600 border border-slate-300"
+                                        title="Red"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 grid grid-cols-2 gap-2">
+                        <button onclick="openModal('T-Shirts (Cotton • Oversized • Polo)')"
+                            class="bg-brand-navy hover:bg-blue-900 text-white font-bold py-2.5 px-2 rounded-full text-xs transition-all flex items-center justify-center space-x-1 shadow-sm">
+                            <span>Send Enquiry</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] text-brand-orange"></i>
+                        </button>
+                        <button onclick="sendWhatsAppProduct('T-Shirts (Cotton • Oversized • Polo)')"
+                            class="bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-2.5 px-2 rounded-full text-xs transition-all flex items-center justify-center space-x-1.5 shadow-sm hover:scale-[1.02]">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 2: Shirts -->
+                <div
+                    class="prod-card shirts bg-brand-bg rounded-3xl overflow-hidden border border-slate-200 p-4 flex flex-col justify-between hover:shadow-card transition-all">
+                    <div>
+                        <div class="relative h-64 rounded-2xl overflow-hidden bg-slate-200 mb-4">
+                            <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=600&q=80"
+                                alt="Shirts" class="w-full h-full object-cover"
+                                onerror="this.src='https://placehold.co/600x600/1E3A8A/FFFFFF?text=Shirts'">
+                            <span
+                                class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-brand-navy text-[10px] font-extrabold px-3 py-1 rounded-full uppercase">Formal
+                                & Casual</span>
+                        </div>
+                        <span class="text-[11px] font-extrabold text-brand-navy uppercase tracking-wider">Garment
+                            Category</span>
+                        <h3 class="text-lg font-extrabold text-brand-black mt-1">Formal & Casual Shirts</h3>
+                        <p class="text-xs text-slate-500 mt-1">Precision collar fusion, double stitching, and premium
+                            button finishing.</p>
+
+                        <div class="mt-4 space-y-2 text-xs border-t border-slate-200/80 pt-3">
+                            <div class="flex justify-between"><span class="font-semibold text-slate-500">Fabric:</span>
+                                <span class="font-bold text-slate-900">Cotton Poplin / Oxford / Linen Blend</span>
+                            </div>
+                            <div class="flex justify-between"><span class="font-semibold text-slate-500">Sizes:</span>
+                                <span class="font-bold text-slate-900">S, M, L, XL, XXL</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-semibold text-slate-500">Colors:</span>
+                                <div class="flex space-x-1.5">
+                                    <span class="w-3.5 h-3.5 rounded-full bg-blue-200 border border-slate-300"
+                                        title="Sky Blue"></span>
+                                    <span class="w-3.5 h-3.5 rounded-full bg-white border border-slate-300"
+                                        title="White"></span>
+                                    <span class="w-3.5 h-3.5 rounded-full bg-gray-700 border border-slate-300"
+                                        title="Charcoal"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 grid grid-cols-2 gap-2">
+                        <button onclick="openModal('Shirts (Formal & Casual)')"
+                            class="bg-brand-navy hover:bg-blue-900 text-white font-bold py-2.5 px-2 rounded-full text-xs transition-all flex items-center justify-center space-x-1 shadow-sm">
+                            <span>Send Enquiry</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] text-brand-orange"></i>
+                        </button>
+                        <button onclick="sendWhatsAppProduct('Shirts (Formal & Casual)')"
+                            class="bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-2.5 px-2 rounded-full text-xs transition-all flex items-center justify-center space-x-1.5 shadow-sm hover:scale-[1.02]">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 3: Lowers -->
+                <div
+                    class="prod-card lowers bg-brand-bg rounded-3xl overflow-hidden border border-slate-200 p-4 flex flex-col justify-between hover:shadow-card transition-all">
+                    <div>
+                        <div class="relative h-64 rounded-2xl overflow-hidden bg-slate-200 mb-4">
+                            <img src="https://images.unsplash.com/photo-1552902865-b72c031ac5ea?auto=format&fit=crop&w=600&q=80"
+                                alt="Lowers" class="w-full h-full object-cover"
+                                onerror="this.src='https://placehold.co/600x600/1E3A8A/FFFFFF?text=Lowers'">
+                            <span
+                                class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-brand-navy text-[10px] font-extrabold px-3 py-1 rounded-full uppercase">Sports
+                                & Casual</span>
+                        </div>
+                        <span class="text-[11px] font-extrabold text-brand-navy uppercase tracking-wider">Garment
+                            Category</span>
+                        <h3 class="text-lg font-extrabold text-brand-black mt-1">Trackpants & Lowers</h3>
+                        <p class="text-xs text-slate-500 mt-1">Breathable stretchable lowers with zipper pockets and
+                            adjustable drawstrings.</p>
+
+                        <div class="mt-4 space-y-2 text-xs border-t border-slate-200/80 pt-3">
+                            <div class="flex justify-between"><span class="font-semibold text-slate-500">Fabric:</span>
+                                <span class="font-bold text-slate-900">Dry-Fit / Lycra Cotton / NS Hosiery</span>
+                            </div>
+                            <div class="flex justify-between"><span class="font-semibold text-slate-500">Sizes:</span>
+                                <span class="font-bold text-slate-900">S, M, L, XL, XXL</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-semibold text-slate-500">Colors:</span>
+                                <div class="flex space-x-1.5">
+                                    <span class="w-3.5 h-3.5 rounded-full bg-black border border-slate-300"
+                                        title="Black"></span>
+                                    <span class="w-3.5 h-3.5 rounded-full bg-slate-600 border border-slate-300"
+                                        title="Grey"></span>
+                                    <span class="w-3.5 h-3.5 rounded-full bg-blue-950 border border-slate-300"
+                                        title="Dark Navy"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 grid grid-cols-2 gap-2">
+                        <button onclick="openModal('Lowers (Sports & Casual)')"
+                            class="bg-brand-navy hover:bg-blue-900 text-white font-bold py-2.5 px-2 rounded-full text-xs transition-all flex items-center justify-center space-x-1 shadow-sm">
+                            <span>Send Enquiry</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] text-brand-orange"></i>
+                        </button>
+                        <button onclick="sendWhatsAppProduct('Lowers (Sports & Casual)')"
+                            class="bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-2.5 px-2 rounded-full text-xs transition-all flex items-center justify-center space-x-1.5 shadow-sm hover:scale-[1.02]">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 4: Pants -->
+                <div
+                    class="prod-card pants bg-brand-bg rounded-3xl overflow-hidden border border-slate-200 p-4 flex flex-col justify-between hover:shadow-card transition-all">
+                    <div>
+                        <div class="relative h-64 rounded-2xl overflow-hidden bg-slate-200 mb-4">
+                            <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80"
+                                alt="Pants" class="w-full h-full object-cover"
+                                onerror="this.src='https://placehold.co/600x600/1E3A8A/FFFFFF?text=Pants'">
+                            <span
+                                class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-brand-navy text-[10px] font-extrabold px-3 py-1 rounded-full uppercase">Denim
+                                & Cotton</span>
+                        </div>
+                        <span class="text-[11px] font-extrabold text-brand-navy uppercase tracking-wider">Garment
+                            Category</span>
+                        <h3 class="text-lg font-extrabold text-brand-black mt-1">Denim Jeans & Cotton Pants</h3>
+                        <p class="text-xs text-slate-500 mt-1">Durable denim jeans and casual cotton chinos with custom
+                            rivets and labels.</p>
+
+                        <div class="mt-4 space-y-2 text-xs border-t border-slate-200/80 pt-3">
+                            <div class="flex justify-between"><span class="font-semibold text-slate-500">Fabric:</span>
+                                <span class="font-bold text-slate-900">Heavy Denim / Cotton Twill</span>
+                            </div>
+                            <div class="flex justify-between"><span class="font-semibold text-slate-500">Sizes:</span>
+                                <span class="font-bold text-slate-900">S, M, L, XL, XXL</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-semibold text-slate-500">Colors:</span>
+                                <div class="flex space-x-1.5">
+                                    <span class="w-3.5 h-3.5 rounded-full bg-blue-800 border border-slate-300"
+                                        title="Indigo Blue"></span>
+                                    <span class="w-3.5 h-3.5 rounded-full bg-slate-900 border border-slate-300"
+                                        title="Black Denim"></span>
+                                    <span class="w-3.5 h-3.5 rounded-full bg-amber-100 border border-slate-300"
+                                        title="Beige Chino"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 grid grid-cols-2 gap-2">
+                        <button onclick="openModal('Pants (Denim & Cotton)')"
+                            class="bg-brand-navy hover:bg-blue-900 text-white font-bold py-2.5 px-2 rounded-full text-xs transition-all flex items-center justify-center space-x-1 shadow-sm">
+                            <span>Send Enquiry</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] text-brand-orange"></i>
+                        </button>
+                        <button onclick="sendWhatsAppProduct('Pants (Denim & Cotton)')"
+                            class="bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-2.5 px-2 rounded-full text-xs transition-all flex items-center justify-center space-x-1.5 shadow-sm hover:scale-[1.02]">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 5: Trousers -->
+                <div
+                    class="prod-card trousers bg-brand-bg rounded-3xl overflow-hidden border border-slate-200 p-4 flex flex-col justify-between hover:shadow-card transition-all">
+                    <div>
+                        <div class="relative h-64 rounded-2xl overflow-hidden bg-slate-200 mb-4">
+                            <img src="https://images.unsplash.com/photo-1479064555552-3ef4979f8908?auto=format&fit=crop&w=600&q=80"
+                                alt="Trousers" class="w-full h-full object-cover"
+                                onerror="this.src='https://placehold.co/600x600/1E3A8A/FFFFFF?text=Trousers'">
+                            <span
+                                class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-brand-navy text-[10px] font-extrabold px-3 py-1 rounded-full uppercase">Formal
+                                & Corporate</span>
+                        </div>
+                        <span class="text-[11px] font-extrabold text-brand-navy uppercase tracking-wider">Garment
+                            Category</span>
+                        <h3 class="text-lg font-extrabold text-brand-black mt-1">Formal Trousers & Chinos</h3>
+                        <p class="text-xs text-slate-500 mt-1">Slim-fit tailored trousers with wrinkle-resistant finish
+                            for corporate and office wear.</p>
+
+                        <div class="mt-4 space-y-2 text-xs border-t border-slate-200/80 pt-3">
+                            <div class="flex justify-between"><span class="font-semibold text-slate-500">Fabric:</span>
+                                <span class="font-bold text-slate-900">Poly-Viscose / Terry Rayon / Chino Cotton</span>
+                            </div>
+                            <div class="flex justify-between"><span class="font-semibold text-slate-500">Sizes:</span>
+                                <span class="font-bold text-slate-900">S, M, L, XL, XXL</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-semibold text-slate-500">Colors:</span>
+                                <div class="flex space-x-1.5">
+                                    <span class="w-3.5 h-3.5 rounded-full bg-slate-800 border border-slate-300"
+                                        title="Charcoal"></span>
+                                    <span class="w-3.5 h-3.5 rounded-full bg-amber-800 border border-slate-300"
+                                        title="Khaki"></span>
+                                    <span class="w-3.5 h-3.5 rounded-full bg-blue-900 border border-slate-300"
+                                        title="Navy"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 grid grid-cols-2 gap-2">
+                        <button onclick="openModal('Trousers (Formal & Corporate)')"
+                            class="bg-brand-navy hover:bg-blue-900 text-white font-bold py-2.5 px-2 rounded-full text-xs transition-all flex items-center justify-center space-x-1 shadow-sm">
+                            <span>Send Enquiry</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] text-brand-orange"></i>
+                        </button>
+                        <button onclick="sendWhatsAppProduct('Trousers (Formal & Corporate)')"
+                            class="bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-2.5 px-2 rounded-full text-xs transition-all flex items-center justify-center space-x-1.5 shadow-sm hover:scale-[1.02]">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 6: Jackets & Hoodies -->
+                <div
+                    class="prod-card jackets bg-brand-bg rounded-3xl overflow-hidden border border-slate-200 p-4 flex flex-col justify-between hover:shadow-card transition-all">
+                    <div>
+                        <div class="relative h-64 rounded-2xl overflow-hidden bg-slate-200 mb-4">
+                            <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80"
+                                alt="Jackets" class="w-full h-full object-cover"
+                                onerror="this.src='https://placehold.co/600x600/1E3A8A/FFFFFF?text=Jackets'">
+                            <span
+                                class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-brand-navy text-[10px] font-extrabold px-3 py-1 rounded-full uppercase">Winter
+                                Collection</span>
+                        </div>
+                        <span class="text-[11px] font-extrabold text-brand-navy uppercase tracking-wider">Garment
+                            Category</span>
+                        <h3 class="text-lg font-extrabold text-brand-black mt-1">Jackets & Hoodies</h3>
+                        <p class="text-xs text-slate-500 mt-1">Warm fleece hoodies, bomber jackets, and winter windproof
+                            coats.</p>
+
+                        <div class="mt-4 space-y-2 text-xs border-t border-slate-200/80 pt-3">
+                            <div class="flex justify-between"><span class="font-semibold text-slate-500">Fabric:</span>
+                                <span class="font-bold text-slate-900">Heavy Fleece (320 GSM) / Softshell</span>
+                            </div>
+                            <div class="flex justify-between"><span class="font-semibold text-slate-500">Sizes:</span>
+                                <span class="font-bold text-slate-900">S, M, L, XL, XXL</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-semibold text-slate-500">Colors:</span>
+                                <div class="flex space-x-1.5">
+                                    <span class="w-3.5 h-3.5 rounded-full bg-slate-900 border border-slate-300"
+                                        title="Black"></span>
+                                    <span class="w-3.5 h-3.5 rounded-full bg-red-700 border border-slate-300"
+                                        title="Maroon"></span>
+                                    <span class="w-3.5 h-3.5 rounded-full bg-emerald-800 border border-slate-300"
+                                        title="Olive Green"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 grid grid-cols-2 gap-2">
+                        <button onclick="openModal('Jackets & Hoodies (Winter Collection)')"
+                            class="bg-brand-navy hover:bg-blue-900 text-white font-bold py-2.5 px-2 rounded-full text-xs transition-all flex items-center justify-center space-x-1 shadow-sm">
+                            <span>Send Enquiry</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] text-brand-orange"></i>
+                        </button>
+                        <button onclick="sendWhatsAppProduct('Jackets & Hoodies (Winter Collection)')"
+                            class="bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-2.5 px-2 rounded-full text-xs transition-all flex items-center justify-center space-x-1.5 shadow-sm hover:scale-[1.02]">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 7: Others / Custom Orders -->
+                <div
+                    class="prod-card others bg-brand-bg rounded-3xl overflow-hidden border border-slate-200 p-4 flex flex-col justify-between hover:shadow-card transition-all">
+                    <div>
+                        <div class="relative h-64 rounded-2xl overflow-hidden bg-slate-200 mb-4">
+                            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80"
+                                alt="Custom Apparel" class="w-full h-full object-cover"
+                                onerror="this.src='https://placehold.co/600x600/1E3A8A/FFFFFF?text=Custom+Apparel'">
+                            <span
+                                class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-brand-navy text-[10px] font-extrabold px-3 py-1 rounded-full uppercase">OEM
+                                & Custom Wear</span>
+                        </div>
+                        <span class="text-[11px] font-extrabold text-brand-navy uppercase tracking-wider">Garment
+                            Category</span>
+                        <h3 class="text-lg font-extrabold text-brand-black mt-1">Other Custom Apparel & Uniforms</h3>
+                        <p class="text-xs text-slate-500 mt-1">Tracksuits, school & corporate uniforms, promotional
+                            activewear & private label designs.</p>
+
+                        <div class="mt-4 space-y-2 text-xs border-t border-slate-200/80 pt-3">
+                            <div class="flex justify-between"><span class="font-semibold text-slate-500">Fabric:</span>
+                                <span class="font-bold text-slate-900">Custom Fabric Blend as per requirement</span>
+                            </div>
+                            <div class="flex justify-between"><span class="font-semibold text-slate-500">Sizes:</span>
+                                <span class="font-bold text-slate-900">S, M, L, XL, XXL</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-semibold text-slate-500">Colors:</span>
+                                <span class="font-bold text-slate-900">All Custom Colors Available</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 grid grid-cols-2 gap-2">
+                        <button onclick="openModal('Others (Custom Apparel & Uniforms)')"
+                            class="bg-brand-navy hover:bg-blue-900 text-white font-bold py-2.5 px-2 rounded-full text-xs transition-all flex items-center justify-center space-x-1 shadow-sm">
+                            <span>Send Enquiry</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] text-brand-orange"></i>
+                        </button>
+                        <button onclick="sendWhatsAppProduct('Others (Custom Apparel & Uniforms)')"
+                            class="bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-2.5 px-2 rounded-full text-xs transition-all flex items-center justify-center space-x-1.5 shadow-sm hover:scale-[1.02]">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: MANUFACTURING PROCESS -->
+    <section id="manufacturing" class="py-20 md:py-28 bg-brand-bg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span
+                    class="text-xs font-bold uppercase tracking-widest text-brand-navy bg-blue-50 px-3 py-1 rounded-full border border-blue-100">Production
+                    Pipeline</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-black tracking-tight mt-3">Our 5-Step
+                    Manufacturing Workflow</h2>
+                <p class="text-slate-600 mt-2 text-sm">Engineered for precision, speed, and strict quality control at
+                    every phase.</p>
+            </div>
+
+            <!-- 5 Step Visual Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+
+                <!-- Step 1 -->
+                <div
+                    class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm relative flex flex-col justify-between hover:border-brand-navy transition-all">
+                    <div>
+                        <div
+                            class="w-10 h-10 rounded-full bg-brand-navy text-white font-extrabold text-sm flex items-center justify-center mb-4">
+                            1</div>
+                        <h3 class="font-extrabold text-base text-brand-black mb-2">Fabric Selection & Laser Cutting</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">Sourcing high-grade combed cotton & synthetic
+                            blends followed by precision pattern cutting.</p>
+                    </div>
+                    <div class="mt-6 text-[10px] font-bold text-brand-orange uppercase tracking-wider">Phase 01</div>
+                </div>
+
+                <!-- Step 2 -->
+                <div
+                    class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm relative flex flex-col justify-between hover:border-brand-navy transition-all">
+                    <div>
+                        <div
+                            class="w-10 h-10 rounded-full bg-brand-navy text-white font-extrabold text-sm flex items-center justify-center mb-4">
+                            2</div>
+                        <h3 class="font-extrabold text-base text-brand-black mb-2">Precision Stitching</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">Experienced tailors operate heavy-duty
+                            multi-needle machines for seam durability.</p>
+                    </div>
+                    <div class="mt-6 text-[10px] font-bold text-brand-orange uppercase tracking-wider">Phase 02</div>
+                </div>
+
+                <!-- Step 3 -->
+                <div
+                    class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm relative flex flex-col justify-between hover:border-brand-navy transition-all">
+                    <div>
+                        <div
+                            class="w-10 h-10 rounded-full bg-brand-navy text-white font-extrabold text-sm flex items-center justify-center mb-4">
+                            3</div>
+                        <h3 class="font-extrabold text-base text-brand-black mb-2">Printing & Custom Embroidery</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">High-definition screen printing, DTG, HD
+                            plastisol & computerised logoE embroidery.</p>
+                    </div>
+                    <div class="mt-6 text-[10px] font-bold text-brand-orange uppercase tracking-wider">Phase 03</div>
+                </div>
+
+                <!-- Step 4 -->
+                <div
+                    class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm relative flex flex-col justify-between hover:border-brand-navy transition-all">
+                    <div>
+                        <div
+                            class="w-10 h-10 rounded-full bg-brand-navy text-white font-extrabold text-sm flex items-center justify-center mb-4">
+                            4</div>
+                        <h3 class="font-extrabold text-base text-brand-black mb-2">Strict Quality Inspection</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">4-point audit for thread tension, dimension
+                            accuracy, color fastness, and trim finish.</p>
+                    </div>
+                    <div class="mt-6 text-[10px] font-bold text-brand-orange uppercase tracking-wider">Phase 04</div>
+                </div>
+
+                <!-- Step 5 -->
+                <div
+                    class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm relative flex flex-col justify-between hover:border-brand-navy transition-all">
+                    <div>
+                        <div
+                            class="w-10 h-10 rounded-full bg-brand-navy text-white font-extrabold text-sm flex items-center justify-center mb-4">
+                            5</div>
+                        <h3 class="font-extrabold text-base text-brand-black mb-2">Steam Ironing & Poly-Pack Dispatch
+                        </h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">Garments are steam-pressed, individual
+                            poly-wrapped, carton packed, and dispatched.</p>
+                    </div>
+                    <div class="mt-6 text-[10px] font-bold text-brand-orange uppercase tracking-wider">Phase 05</div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 5: WHY CHOOSE US -->
+    <section id="why-choose-us" class="py-20 md:py-28 bg-white border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span
+                    class="text-xs font-bold uppercase tracking-widest text-brand-navy bg-blue-50 px-3 py-1 rounded-full border border-blue-100">Why
+                    Choose Us</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-black tracking-tight mt-3">Why Top Retail
+                    Brands Trust Vishal Enterprises</h2>
+                <p class="text-slate-600 mt-2 text-sm">Industrial infrastructure combined with transparent bulk pricing
+                    and reliable execution.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <div class="bg-brand-bg p-6 rounded-3xl border border-slate-200 hover:shadow-card transition-all">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-brand-navy text-white flex items-center justify-center font-bold text-lg mb-4 shadow-md">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-brand-black mb-2">Premium Fabric & Stitching</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">High-grade combed fabrics, bio-washed cottons, and
+                        double-stitched stress points for maximum lifespan.</p>
+                </div>
+
+                <div class="bg-brand-bg p-6 rounded-3xl border border-slate-200 hover:shadow-card transition-all">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-brand-orange text-white flex items-center justify-center font-bold text-lg mb-4 shadow-md">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-brand-black mb-2">Rapid On-Time Delivery</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Optimized production scheduling guarantees
+                        dependable turnarounds and prompt nationwide logistics dispatch.</p>
+                </div>
+
+                <div class="bg-brand-bg p-6 rounded-3xl border border-slate-200 hover:shadow-card transition-all">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-brand-navy text-white flex items-center justify-center font-bold text-lg mb-4 shadow-md">
+                        <i class="fa-solid fa-pen-ruler"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-brand-black mb-2">Complete OEM & Customization</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Full custom brand woven tags, care labels,
+                        customized poly bags, screen printing, and custom sizing specs.</p>
+                </div>
+
+                <div class="bg-brand-bg p-6 rounded-3xl border border-slate-200 hover:shadow-card transition-all">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-slate-900 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-md">
+                        <i class="fa-solid fa-tag"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-brand-black mb-2">Direct Factory Pricing</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Transparent wholesale rates without middleman
+                        margins, giving your retail business superior profit margins.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: GALLERY -->
+    <section id="gallery" class="py-20 md:py-28 bg-brand-bg border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span
+                    class="text-xs font-bold uppercase tracking-widest text-brand-navy bg-blue-50 px-3 py-1 rounded-full border border-blue-100">Visual
+                    Tour</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-black tracking-tight mt-3">Factory &
+                    Production Gallery</h2>
+                <p class="text-slate-600 mt-2 text-sm">Take a closer look at our machinery, skilled workforce, and
+                    finished apparel quality.</p>
+            </div>
+
+            <!-- Gallery Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mb-8">
+                <button onclick="filterGallery('all', this)"
+                    class="gal-tab bg-brand-navy text-white font-bold px-5 py-2 rounded-full text-xs">All
+                    Photos</button>
+                <button onclick="filterGallery('factory', this)"
+                    class="gal-tab bg-slate-100 text-slate-700 hover:bg-slate-200 font-semibold px-5 py-2 rounded-full text-xs">Factory
+                    & Machinery</button>
+                <button onclick="filterGallery('workers', this)"
+                    class="gal-tab bg-slate-100 text-slate-700 hover:bg-slate-200 font-semibold px-5 py-2 rounded-full text-xs">Workers
+                    & Stitching</button>
+                <button onclick="filterGallery('finished', this)"
+                    class="gal-tab bg-slate-100 text-slate-700 hover:bg-slate-200 font-semibold px-5 py-2 rounded-full text-xs">Finished
+                    Products</button>
+            </div>
+
+            <!-- Photo Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <div class="gal-item factory h-64 rounded-3xl overflow-hidden bg-slate-200 relative group cursor-pointer"
+                    onclick="openLightbox('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80', 'Factory Cutting Line - Patna, Bihar')">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80"
+                        alt="Factory Floor"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        onerror="this.src='https://placehold.co/600x400/1E3A8A/FFFFFF?text=Factory+Cutting'">
+                    <div
+                        class="absolute inset-0 bg-brand-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-bold text-xs">
+                        View Image</div>
+                </div>
+
+                <div class="gal-item factory h-64 rounded-3xl overflow-hidden bg-slate-200 relative group cursor-pointer"
+                    onclick="openLightbox('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80', 'Automatic Stitching Machinery')">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80"
+                        alt="Machinery"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        onerror="this.src='https://placehold.co/600x400/1E3A8A/FFFFFF?text=Stitching+Machines'">
+                    <div
+                        class="absolute inset-0 bg-brand-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-bold text-xs">
+                        View Image</div>
+                </div>
+
+                <div class="gal-item workers h-64 rounded-3xl overflow-hidden bg-slate-200 relative group cursor-pointer"
+                    onclick="openLightbox('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1200&q=80', 'Skilled Tailors Assembly Line')">
+                    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80"
+                        alt="Skilled Workers"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        onerror="this.src='https://placehold.co/600x400/1E3A8A/FFFFFF?text=Skilled+Workers'">
+                    <div
+                        class="absolute inset-0 bg-brand-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-bold text-xs">
+                        View Image</div>
+                </div>
+
+                <div class="gal-item finished h-64 rounded-3xl overflow-hidden bg-slate-200 relative group cursor-pointer"
+                    onclick="openLightbox('https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80', 'Finished Premium T-Shirts Batch')">
+                    <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80"
+                        alt="Finished Products"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        onerror="this.src='https://placehold.co/600x600/1E3A8A/FFFFFF?text=Finished+Products'">
+                    <div
+                        class="absolute inset-0 bg-brand-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-bold text-xs">
+                        View Image</div>
+                </div>
+
+                <div class="gal-item finished h-64 rounded-3xl overflow-hidden bg-slate-200 relative group cursor-pointer"
+                    onclick="openLightbox('https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=1200&q=80', 'Finished Formal & Casual Shirts Batch')">
+                    <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=600&q=80"
+                        alt="Finished Shirts"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        onerror="this.src='https://placehold.co/600x400/1E3A8A/FFFFFF?text=Finished+Shirts'">
+                    <div
+                        class="absolute inset-0 bg-brand-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-bold text-xs">
+                        View Image</div>
+                </div>
+
+                <div class="gal-item factory h-64 rounded-3xl overflow-hidden bg-slate-200 relative group cursor-pointer"
+                    onclick="openLightbox('https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=1200&q=80', 'Quality Inspection & Measurement Station')">
+                    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80"
+                        alt="Quality Check"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        onerror="this.src='https://placehold.co/600x400/1E3A8A/FFFFFF?text=Quality+Inspection'">
+                    <div
+                        class="absolute inset-0 bg-brand-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-bold text-xs">
+                        View Image</div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 7: CONTACT US -->
+    <section id="contact" class="py-20 md:py-28 bg-white border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+                <!-- Contact Direct Info -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span
+                            class="text-xs font-bold uppercase tracking-widest text-brand-navy bg-blue-50 px-3 py-1 rounded-full border border-blue-100">Get
+                            In Touch</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-black tracking-tight mt-3">Business &
+                            Wholesale Enquiries</h2>
+                        <p class="text-slate-600 mt-2 text-sm">Reach out directly to our sales and factory production
+                            team for bulk quotes, sample requests, or factory visits.</p>
+                    </div>
+
+                    <div class="space-y-4 pt-2">
+                        <!-- Phone -->
+                        <div class="bg-brand-bg p-5 rounded-2xl border border-slate-200 flex items-center space-x-4">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-brand-navy text-white flex items-center justify-center font-bold shrink-0">
+                                <i class="fa-solid fa-phone text-sm"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-[10px] font-bold text-slate-400 uppercase">Phone & WhatsApp</p>
+                                <div class="flex flex-wrap items-center gap-2 mt-0.5">
+                                    <a href="tel:+919608446269"
+                                        class="text-sm font-bold text-brand-black hover:text-brand-navy transition-colors">+91
+                                        9608446269</a>
+                                    <a href="https://wa.me/919608446269?text=Hello%20Vishal%20Enterprises%2C%20I%20want%20to%20enquire%20about%20bulk%20garment%20manufacturing."
+                                        target="_blank"
+                                        class="inline-flex items-center space-x-1 text-[11px] font-bold bg-[#25D366]/10 text-[#128C7E] hover:bg-[#25D366]/20 px-2.5 py-0.5 rounded-full transition-colors">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                        <span>Chat on WhatsApp</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="bg-brand-bg p-5 rounded-2xl border border-slate-200 flex items-center space-x-4">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-brand-orange text-white flex items-center justify-center font-bold shrink-0">
+                                <i class="fa-solid fa-envelope text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-bold text-slate-400 uppercase">Email Address</p>
+                                <a href="mailto:info@vishalenterprises.com"
+                                    class="text-sm font-bold text-brand-black hover:text-brand-navy transition-colors">vishalenterprises9939@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="bg-brand-bg p-5 rounded-2xl border border-slate-200 flex items-center space-x-4">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold shrink-0">
+                                <i class="fa-solid fa-location-dot text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-bold text-slate-400 uppercase">Factory Address</p>
+                                <p class="text-xs font-bold text-brand-black">Chakwaja Nagwan, Vaishali , Bihar 844120,
+                                    India</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Google Map Box -->
+                    <div class="bg-brand-bg p-2 rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                        <iframe title="Vishal Enterprises Location" src="https://maps.app.goo.gl/pq4ovoTdWy7hbTMKA"
+                            class="w-full h-48 rounded-xl border-0" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <!-- Interactive Enquiry Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-brand-bg p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-card">
+                        <h3 class="text-2xl font-extrabold text-brand-black mb-1">Send Bulk Order Enquiry</h3>
+                        <p class="text-xs text-slate-500 mb-6">Fill out your apparel requirements below for an instant
+                            quotation and sample dispatch.</p>
+
+                        <form id="main-contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Name
+                                        *</label>
+                                    <input type="text" id="contact-name" required placeholder="Full Name"
+                                        class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy bg-white">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Phone /
+                                        WhatsApp *</label>
+                                    <input type="tel" id="contact-phone" required placeholder="+91 XXXXX XXXXX"
+                                        class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy bg-white">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Email
+                                        Address</label>
+                                    <input type="email" id="contact-email" placeholder="name@company.com"
+                                        class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy bg-white">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">What Enquiry
+                                        *</label>
+                                    <select id="what-enquiry" required
+                                        class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand-navy">
+                                        <option value="Bulk Quote">Bulk Quote</option>
+                                        <option value="Sample Request">Sample Request</option>
+                                        <option value="Factory Visit">Factory Visit</option>
+                                        <option value="General Question">General Question</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Garment
+                                        Category *</label>
+                                    <select id="main-category-select"
+                                        class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand-navy">
+                                        <option value="T-Shirts">T-Shirts (Cotton / Polo / Oversized)</option>
+                                        <option value="Shirts">Shirts (Formal & Casual)</option>
+                                        <option value="Lowers">Lowers (Sports & Casual Trackpants)</option>
+                                        <option value="Pants">Pants (Denim & Cotton Chinos)</option>
+                                        <option value="Trousers">Trousers (Formal & Corporate)</option>
+                                        <option value="Jackets & Hoodies">Jackets & Hoodies</option>
+                                        <option value="Others">Others (Custom Apparel & Uniforms)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between items-center mb-1">
+                                    <label class="text-xs font-bold text-slate-700 uppercase">Estimated Order
+                                        Quantity</label>
+                                    <span id="quantity-badge"
+                                        class="text-xs font-bold text-brand-navy bg-blue-50 px-3 py-0.5 rounded-full border border-blue-100">500
+                                        Pieces</span>
+                                </div>
+                                <input type="range" id="contact-quantity" min="100" max="10000" step="100" value="500"
+                                    oninput="document.getElementById('quantity-badge').innerText = this.value + ' Pieces'"
+                                    class="w-full accent-brand-navy cursor-pointer">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Order Details /
+                                    Customization Specs</label>
+                                <textarea id="contact-details" rows="3"
+                                    placeholder="GSM, sizes breakdown (S to XXL), color preferences, branding details..."
+                                    class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy bg-white"></textarea>
+                            </div>
+
+                            <div class="pt-2">
+                                <button type="submit"
+                                    class="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-extrabold py-4 px-6 rounded-full transition-all shadow-xl flex items-center justify-center space-x-3 hover:scale-[1.01] text-base group">
+                                    <i
+                                        class="fa-brands fa-whatsapp text-2xl group-hover:scale-110 transition-transform"></i>
+                                    <span>Send Enquiry on WhatsApp</span>
+                                    <i
+                                        class="fa-solid fa-arrow-right text-xs opacity-80 group-hover:translate-x-1 transition-transform"></i>
+                                </button>
+                            </div>
+                            <p
+                                class="text-xs text-center text-slate-500 font-semibold flex items-center justify-center space-x-1.5 mt-2">
+                                <i class="fa-solid fa-bolt text-brand-orange text-xs"></i>
+                                <span>Direct enquiry sent to Factory Production Desk on WhatsApp (+91 9608446269) for
+                                    instant quotation.</span>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-black text-white py-12 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 border-b border-slate-800 pb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-2">
+                        <div class="w-9 h-9 overflow-hidden rounded-full">
+                            <img src="logoE.jpeg" alt="Vishal Enterprises" class="w-full h-full object-contain">
+                        </div>
+                        <span class="font-extrabold text-lg tracking-tight uppercase">Vishal Enterprises</span>
+                    </div>
+                    <p class="text-xs text-slate-400">Premier Ready-Made Garments Manufacturer • Vaishali , Bihar, India
+                    </p>
+                    <p class="text-[11px] text-brand-orange mt-1">T-Shirts • Shirts • Lowers • Pants • Trousers •
+                        Jackets • Custom Wear</p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-6 text-xs text-slate-400 font-medium">
+                    <a href="#home" class="hover:text-white transition-colors">Home</a>
+                    <a href="#about" class="hover:text-white transition-colors">About Us</a>
+                    <a href="#products" class="hover:text-white transition-colors">Products</a>
+                    <a href="#manufacturing" class="hover:text-white transition-colors">Manufacturing Process</a>
+                    <a href="#why-choose-us" class="hover:text-white transition-colors">Why Us</a>
+                    <a href="#gallery" class="hover:text-white transition-colors">Gallery</a>
+                    <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+                </div>
+            </div>
+
+            <div
+                class="pt-8 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>&copy; 2026 Vishal Enterprises. All Rights Reserved.</p>
+                <div class="flex space-x-4 text-slate-400 text-sm">
+                    <a href="https://wa.me/919608446269?text=Hello%20Vishal%20Enterprises%2C%20I%20have%20an%20enquiry%20regarding%20bulk%20garments."
+                        target="_blank" class="hover:text-[#25D366] transition-colors"><i
+                            class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" class="hover:text-white"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-white"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-white"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://share.google/S9sL5mSGNXCLPWKuM" target="_blank" class="hover:text-white">Share</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS & LIGHTBOX -->
+    <!-- Enquiry Modal -->
+    <div id="enquiry-modal"
+        class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-brand-black/70 backdrop-blur-sm hidden">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-floating relative border border-slate-100">
+            <button onclick="closeModal()"
+                class="absolute top-4 right-4 text-slate-400 hover:text-brand-black font-bold text-xl">&times;</button>
+            <div class="flex items-center space-x-2 mb-1">
+                <span class="w-2.5 h-2.5 rounded-full bg-brand-orange animate-pulse"></span>
+                <h3 class="text-xl font-extrabold text-brand-black">Product Quote Request</h3>
+            </div>
+            <p id="modal-product-name" class="text-xs text-brand-navy font-bold mb-4">Selected Item</p>
+
+            <form id="quick-enquiry-form" onsubmit="handleModalSubmit(event)" class="space-y-3">
+                <input type="text" id="modal-name" required placeholder="Your Name *"
+                    class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy bg-white">
+                <input type="tel" id="modal-phone" required placeholder="Phone / WhatsApp *"
+                    class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy bg-white">
+
+                <div>
+                    <label class="block text-[11px] font-bold text-slate-500 uppercase mb-1">Select Garment
+                        Category</label>
+                    <select id="modal-category-select"
+                        class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand-navy">
+                        <option value="T-Shirts">T-Shirts (Cotton / Polo / Oversized)</option>
+                        <option value="Shirts">Shirts (Formal & Casual)</option>
+                        <option value="Lowers">Lowers (Sports & Casual)</option>
+                        <option value="Pants">Pants (Denim & Cotton)</option>
+                        <option value="Trousers">Trousers (Formal & Corporate)</option>
+                        <option value="Jackets & Hoodies">Jackets & Hoodies</option>
+                        <option value="Others">Others (Custom Apparel & Uniforms)</option>
+                    </select>
+                </div>
+
+                <input type="number" id="modal-quantity" required placeholder="Required Quantity (Pcs, e.g. 500) *"
+                    class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy bg-white">
+                <textarea id="modal-notes" rows="2" placeholder="Specific fabric GSM, colors, or size breakdown..."
+                    class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy bg-white"></textarea>
+
+                <div class="pt-2">
+                    <button type="submit"
+                        class="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-extrabold py-3.5 px-4 rounded-full text-sm transition-all flex items-center justify-center space-x-2 shadow-lg hover:scale-[1.01] group">
+                        <i class="fa-brands fa-whatsapp text-lg group-hover:scale-110 transition-transform"></i>
+                        <span>Send Enquiry on WhatsApp</span>
+                    </button>
+                </div>
+                <p class="text-[11px] text-slate-500 text-center font-semibold mt-2">
+                    ⚡ Instant WhatsApp quote & sample dispatch details from Vishal Enterprises (+91 9608446269)
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Gallery Lightbox -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-brand-black/90 flex flex-col items-center justify-center p-4 hidden"
+        onclick="closeLightbox()">
+        <img id="lightbox-img" src="" class="max-h-[80vh] rounded-2xl object-contain">
+        <p id="lightbox-caption" class="text-white text-xs font-semibold mt-3"></p>
+    </div>
+
+    <!-- FLOATING WHATSAPP ENQUIRY SYSTEM -->
+    <div id="whatsapp-widget-container" class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+
+        <!-- Interactive WhatsApp Chat Window Popup -->
+        <div id="whatsapp-chat-card"
+            class="hidden mb-4 w-[360px] max-w-[calc(100vw-2rem)] bg-white rounded-3xl shadow-floating border border-slate-200 overflow-hidden transform transition-all duration-300">
+
+            <!-- WhatsApp Chat Header -->
+            <div class="bg-[#075E54] text-white p-4 flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="relative">
+                        <img src="logoE.jpeg" alt="Vishal Enterprises"
+                            class="w-11 h-11 rounded-full object-cover border-2 border-white/80 bg-white">
+                        <span
+                            class="absolute bottom-0 right-0 w-3 h-3 bg-[#25D366] border-2 border-white rounded-full"></span>
+                    </div>
+                    <div>
+                        <div class="flex items-center space-x-1.5">
+                            <span class="font-extrabold text-sm tracking-tight text-white leading-tight">Vishal
+                                Enterprises</span>
+                            <i class="fa-solid fa-circle-check text-[#25D366] text-xs"
+                                title="Verified Manufacturer"></i>
+                        </div>
+                        <p class="text-[11px] text-emerald-100 font-medium">Online • Factory Production Desk</p>
+                    </div>
+                </div>
+                <button onclick="toggleWhatsAppWidget()"
+                    class="text-white/80 hover:text-white p-1 text-lg rounded-full focus:outline-none"
+                    aria-label="Close Chat">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- WhatsApp Message Body -->
+            <div class="p-4 bg-[#EFEAE2]/60 space-y-3 max-h-[380px] overflow-y-auto">
+                <div class="text-center my-1">
+                    <span
+                        class="text-[10px] font-bold text-slate-500 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full uppercase shadow-xs">Today
+                        • Garment Wholesale Helpdesk</span>
+                </div>
+
+                <!-- Incoming Factory Greeting Message -->
+                <div class="flex items-start space-x-2">
+                    <img src="logoE.jpeg" alt="Avatar"
+                        class="w-7 h-7 rounded-full object-cover shrink-0 mt-1 border border-slate-200 bg-white">
+                    <div
+                        class="bg-white p-3.5 rounded-2xl rounded-tl-none shadow-xs border border-slate-100 max-w-[85%]">
+                        <p class="text-xs font-bold text-brand-navy mb-1">Vishal Enterprises Sales</p>
+                        <p class="text-xs text-slate-700 leading-relaxed">
+                            Namaste! Welcome to Vishal Enterprises. 👋<br>
+                            We manufacture premium T-Shirts, Shirts, Lowers, Denim Pants & Corporate Uniforms in bulk.
+                        </p>
+                        <p class="text-[11px] text-slate-500 mt-2 font-medium">
+                            How can our production team assist your wholesale apparel requirements today?
+                        </p>
+                        <div
+                            class="text-[9px] text-slate-400 text-right mt-1 font-semibold flex items-center justify-end space-x-1">
+                            <span>Just now</span>
+                            <i class="fa-solid fa-check-double text-blue-500 text-[10px]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instant 1-Click Enquiry Chips -->
+                <div class="space-y-1.5 pt-1">
+                    <p class="text-[10px] font-bold text-slate-500 uppercase tracking-wider px-1">Quick Enquiries
+                        (1-Click):</p>
+
+                    <button
+                        onclick="sendFloatingChatPrompt('👕 Bulk T-Shirts / Polos Quote: Hi, please share rate card, fabric GSM and minimum order quantity for T-Shirts.')"
+                        class="w-full text-left text-xs bg-white hover:bg-emerald-50 text-slate-700 hover:text-emerald-800 p-2.5 rounded-xl border border-slate-200 hover:border-emerald-300 font-semibold transition-all flex items-center justify-between group">
+                        <span class="truncate">👕 T-Shirts & Polos Price List</span>
+                        <i
+                            class="fa-solid fa-chevron-right text-[10px] text-slate-400 group-hover:text-emerald-600"></i>
+                    </button>
+
+                    <button
+                        onclick="sendFloatingChatPrompt('👔 Shirts Catalog & Samples: Hello, I need wholesale pricing and fabric samples for formal & casual shirts.')"
+                        class="w-full text-left text-xs bg-white hover:bg-emerald-50 text-slate-700 hover:text-emerald-800 p-2.5 rounded-xl border border-slate-200 hover:border-emerald-300 font-semibold transition-all flex items-center justify-between group">
+                        <span class="truncate">👔 Shirts Wholesale Catalog</span>
+                        <i
+                            class="fa-solid fa-chevron-right text-[10px] text-slate-400 group-hover:text-emerald-600"></i>
+                    </button>
+
+                    <button
+                        onclick="sendFloatingChatPrompt('👖 Lowers & Denim Pants Bulk Order: Looking for sports trackpants and denim jeans bulk supply.')"
+                        class="w-full text-left text-xs bg-white hover:bg-emerald-50 text-slate-700 hover:text-emerald-800 p-2.5 rounded-xl border border-slate-200 hover:border-emerald-300 font-semibold transition-all flex items-center justify-between group">
+                        <span class="truncate">👖 Trackpants, Lowers & Jeans</span>
+                        <i
+                            class="fa-solid fa-chevron-right text-[10px] text-slate-400 group-hover:text-emerald-600"></i>
+                    </button>
+
+                    <button
+                        onclick="sendFloatingChatPrompt('🏭 Factory Visit & Custom OEM: Hi Vishal Enterprises, we want custom branded apparel manufacturing for our label.')"
+                        class="w-full text-left text-xs bg-white hover:bg-emerald-50 text-slate-700 hover:text-emerald-800 p-2.5 rounded-xl border border-slate-200 hover:border-emerald-300 font-semibold transition-all flex items-center justify-between group">
+                        <span class="truncate">🏭 Private Label OEM & Branding</span>
+                        <i
+                            class="fa-solid fa-chevron-right text-[10px] text-slate-400 group-hover:text-emerald-600"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- WhatsApp Interactive Input Box -->
+            <div class="p-3 bg-white border-t border-slate-200 flex items-center space-x-2">
+                <input id="whatsapp-floating-input" type="text" placeholder="Type your apparel inquiry..."
+                    class="flex-1 px-4 py-2.5 rounded-full border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-[#25D366] bg-slate-50"
+                    onkeypress="if(event.key==='Enter') sendFloatingCustomMessage()">
+                <button onclick="sendFloatingCustomMessage()"
+                    class="w-10 h-10 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center justify-center transition-all shadow-md shrink-0 hover:scale-105"
+                    title="Send WhatsApp Message">
+                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                </button>
+            </div>
+
+            <div class="bg-slate-50 px-4 py-2 text-center border-t border-slate-100">
+                <span class="text-[10px] text-slate-400 font-medium flex items-center justify-center space-x-1">
+                    <i class="fa-solid fa-lock text-[8px]"></i>
+                    <span>Direct chat with factory manager (+91 9608446269)</span>
+                </span>
+            </div>
+        </div>
+
+        <!-- Floating Action Button & Tooltip Callout -->
+        <div class="flex items-center space-x-3">
+
+            <!-- Tooltip Prompt Pill -->
+            <div id="whatsapp-callout-pill"
+                class="hidden sm:flex items-center space-x-2 bg-white text-slate-800 text-xs font-bold px-4 py-2 rounded-full shadow-floating border border-slate-200 animate-bounce cursor-pointer"
+                onclick="toggleWhatsAppWidget()">
+                <span class="w-2 h-2 rounded-full bg-[#25D366] animate-ping"></span>
+                <span>Chat for Wholesale Rates!</span>
+                <button onclick="closeWhatsAppCallout(event)"
+                    class="text-slate-400 hover:text-slate-700 ml-1 font-extrabold text-sm leading-none">&times;</button>
+            </div>
+
+            <!-- Floating Green WhatsApp Button -->
+            <button id="whatsapp-main-toggle" onclick="toggleWhatsAppWidget()"
+                class="relative group w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center justify-center shadow-floating transition-transform transform hover:scale-110 focus:outline-none"
+                aria-label="WhatsApp Enquiry">
+                <!-- Ping Effect Animation -->
+                <span class="absolute -inset-1 rounded-full bg-[#25D366] opacity-35 animate-ping -z-10"></span>
+
+                <!-- WhatsApp Brand Icon -->
+                <i class="fa-brands fa-whatsapp text-3xl sm:text-4xl text-white"></i>
+
+                <!-- Unread Notification Badge -->
+                <span
+                    class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-red-600 text-white font-extrabold text-[10px] flex items-center justify-center border-2 border-white shadow-sm">1</span>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Feedback Toast (Positioned elevated above floating button) -->
+    <div id="toast"
+        class="fixed bottom-24 right-6 z-50 bg-brand-black text-white px-6 py-4 rounded-2xl shadow-floating flex items-center space-x-3 transform translate-y-32 opacity-0 transition-all max-w-sm">
+        <i class="fa-solid fa-circle-check text-[#25D366] text-base"></i>
+        <span class="text-xs font-bold">Enquiry Sent! Our team will contact you shortly.</span>
+    </div>
+
+    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
+    <script>
+        // WHATSAPP ENQUIRY SYSTEM CONFIGURATION
+        const WHATSAPP_PHONE = "919608446269";
+
+        // Helper to launch WhatsApp cleanly in a new tab
+        function openWhatsAppWithMessage(message) {
+            const encoded = encodeURIComponent(message);
+            const url = `https://wa.me/${WHATSAPP_PHONE}?text=${encoded}`;
+            window.open(url, '_blank');
+        }
+
+        // Toggle Floating WhatsApp Chat Widget
+        function toggleWhatsAppWidget() {
+            const chatCard = document.getElementById('whatsapp-chat-card');
+            const callout = document.getElementById('whatsapp-callout-pill');
+            if (chatCard) {
+                chatCard.classList.toggle('hidden');
+                if (!chatCard.classList.contains('hidden')) {
+                    if (callout) callout.style.display = 'none';
+                    setTimeout(() => {
+                        const input = document.getElementById('whatsapp-floating-input');
+                        if (input) input.focus();
+                    }, 100);
+                }
+            }
+        }
+
+        // Close Tooltip callout
+        function closeWhatsAppCallout(e) {
+            if (e) e.stopPropagation();
+            const callout = document.getElementById('whatsapp-callout-pill');
+            if (callout) callout.style.display = 'none';
+        }
+
+        // Send pre-set prompt from floating chat
+        function sendFloatingChatPrompt(promptText) {
+            const message = `*🏭 Quick Enquiry - Vishal Enterprises*\n━━━━━━━━━━━━━━━━━━━━\n${promptText}\n━━━━━━━━━━━━━━━━━━━━\n_Sent via website WhatsApp helpdesk_`;
+            openWhatsAppWithMessage(message);
+            toggleWhatsAppWidget();
+            showToast("Opening WhatsApp with your enquiry...");
+        }
+
+        // Send custom typed message from floating chat
+        function sendFloatingCustomMessage() {
+            const input = document.getElementById('whatsapp-floating-input');
+            const customText = input ? input.value.trim() : '';
+            if (!customText) {
+                alert('Please type your inquiry before sending.');
+                return;
+            }
+            const message = `*🏭 Manufacturing Enquiry - Vishal Enterprises*\n━━━━━━━━━━━━━━━━━━━━\n${customText}\n━━━━━━━━━━━━━━━━━━━━\n_Sent via website WhatsApp concierge_`;
+            openWhatsAppWithMessage(message);
+            input.value = '';
+            toggleWhatsAppWidget();
+            showToast("Opening WhatsApp with your enquiry...");
+        }
+
+        // Product Card Direct WhatsApp Quote
+        function sendWhatsAppProduct(productName) {
+            const message = `*👕 Garment Enquiry - Vishal Enterprises*\n━━━━━━━━━━━━━━━━━━━━\nHello Vishal Enterprises Team,\nI am interested in bulk manufacturing and wholesale supply for:\n👉 *${productName}*\n\nPlease share:\n• Fabric specifications & GSM options\n• Minimum Order Quantity (MOQ)\n• Wholesale price slab tiers & sample dispatch timeline\n\nThank you!\n━━━━━━━━━━━━━━━━━━━━\n_Sent via Vishal Enterprises Products Catalog_`;
+            openWhatsAppWithMessage(message);
+            showToast("Opening WhatsApp for " + productName + "...");
+        }
+
+        // Modal Form WhatsApp Submission
+        function submitModalToWhatsApp() {
+            const productName = document.getElementById('modal-product-name')?.innerText || 'Apparel Inquiry';
+            const name = document.getElementById('modal-name')?.value.trim();
+            const phone = document.getElementById('modal-phone')?.value.trim();
+            const category = document.getElementById('modal-category-select')?.value || 'Garments';
+            const quantity = document.getElementById('modal-quantity')?.value.trim() || '500';
+            const notes = document.getElementById('modal-notes')?.value.trim() || 'Need bulk pricing and catalog';
+
+            if (!name || !phone) {
+                alert('Please enter your Name and WhatsApp / Phone number to continue.');
+                return;
+            }
+
+            const message = `*👕 Product Quote Request - Vishal Enterprises*\n━━━━━━━━━━━━━━━━━━━━\n🏷️ *Product / Model:* ${productName}\n👤 *Customer Name:* ${name}\n📞 *WhatsApp / Phone:* ${phone}\n📂 *Category:* ${category}\n📦 *Required Quantity:* ${quantity} Pieces\n📝 *Fabric / Size Notes:* ${notes}\n━━━━━━━━━━━━━━━━━━━━\n_Enquiry sent via Website Quick Quote Modal_`;
+
+            openWhatsAppWithMessage(message);
+            closeModal();
+            showToast("Opening WhatsApp to send your enquiry...");
+            document.getElementById('quick-enquiry-form')?.reset();
+        }
+
+        // Contact Section Form WhatsApp Submission
+        function sendContactFormToWhatsApp() {
+            const name = document.getElementById('contact-name')?.value.trim();
+            const phone = document.getElementById('contact-phone')?.value.trim();
+            const email = document.getElementById('contact-email')?.value.trim() || 'Not provided';
+            const enquiryType = document.getElementById('what-enquiry')?.value || 'Bulk Quote';
+            const category = document.getElementById('main-category-select')?.value || 'T-Shirts';
+            const quantity = document.getElementById('contact-quantity')?.value || '500';
+            const details = document.getElementById('contact-details')?.value.trim() || 'Please share product catalog & price list';
+
+            if (!name || !phone) {
+                alert('Please enter your Name and Phone / WhatsApp number before submitting.');
+                return;
+            }
+
+            const message = `*🏭 Bulk Manufacturing Enquiry - Vishal Enterprises*\n━━━━━━━━━━━━━━━━━━━━\n👤 *Client Name:* ${name}\n📞 *Phone / WhatsApp:* ${phone}\n✉️ *Email:* ${email}\n📋 *Enquiry Type:* ${enquiryType}\n👕 *Garment Category:* ${category}\n📦 *Estimated Quantity:* ${quantity} Pieces\n📝 *Customization Specs:* ${details}\n━━━━━━━━━━━━━━━━━━━━\n_Submitted via Vishal Enterprises Web Portal_`;
+
+            openWhatsAppWithMessage(message);
+            showToast("Opening WhatsApp to send your enquiry...");
+            document.getElementById('main-contact-form')?.reset();
+        }
+
+        // Toggle Mobile Navigation
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Scroll helper
+        function scrollToSection(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Category Filter for Products
+        function filterCat(cat, btn) {
+            document.querySelectorAll('.prod-tab').forEach(b => {
+                b.className = 'prod-tab bg-slate-100 text-slate-700 hover:bg-slate-200 font-semibold px-5 py-2 rounded-full text-xs transition-all';
+            });
+            btn.className = 'prod-tab bg-brand-navy text-white font-bold px-5 py-2 rounded-full text-xs transition-all shadow-sm';
+
+            const cards = document.querySelectorAll('.prod-card');
+            cards.forEach(card => {
+                if (cat === 'all' || card.classList.contains(cat)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Category Filter for Gallery
+        function filterGallery(cat, btn) {
+            document.querySelectorAll('.gal-tab').forEach(b => {
+                b.className = 'gal-tab bg-slate-100 text-slate-700 hover:bg-slate-200 font-semibold px-4 py-1.5 rounded-full text-xs';
+            });
+            btn.className = 'gal-tab bg-brand-navy text-white font-bold px-4 py-1.5 rounded-full text-xs';
+
+            const items = document.querySelectorAll('.gal-item');
+            items.forEach(item => {
+                if (cat === 'all' || item.classList.contains(cat)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Open Modal and Pre-select category
+        function openModal(prodName) {
+            document.getElementById('modal-product-name').innerText = prodName;
+
+            const modalSelect = document.getElementById('modal-category-select');
+            const mainSelect = document.getElementById('main-category-select');
+
+            if (prodName.includes('T-Shirt')) {
+                if (modalSelect) modalSelect.value = 'T-Shirts';
+                if (mainSelect) mainSelect.value = 'T-Shirts';
+            } else if (prodName.includes('Shirt')) {
+                if (modalSelect) modalSelect.value = 'Shirts';
+                if (mainSelect) mainSelect.value = 'Shirts';
+            } else if (prodName.includes('Lower')) {
+                if (modalSelect) modalSelect.value = 'Lowers';
+                if (mainSelect) mainSelect.value = 'Lowers';
+            } else if (prodName.includes('Pant') && !prodName.includes('Trouser')) {
+                if (modalSelect) modalSelect.value = 'Pants';
+                if (mainSelect) mainSelect.value = 'Pants';
+            } else if (prodName.includes('Trouser')) {
+                if (modalSelect) modalSelect.value = 'Trousers';
+                if (mainSelect) mainSelect.value = 'Trousers';
+            } else if (prodName.includes('Jacket') || prodName.includes('Hoodie')) {
+                if (modalSelect) modalSelect.value = 'Jackets & Hoodies';
+                if (mainSelect) mainSelect.value = 'Jackets & Hoodies';
+            } else if (prodName.includes('Others')) {
+                if (modalSelect) modalSelect.value = 'Others';
+                if (mainSelect) mainSelect.value = 'Others';
+            }
+
+            document.getElementById('enquiry-modal').classList.remove('hidden');
+        }
+
+        // Close Modal
+        function closeModal() {
+            document.getElementById('enquiry-modal').classList.add('hidden');
+        }
+
+        // Form Handlers - "Send Enquiry" is directly submitted on WhatsApp
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            sendContactFormToWhatsApp();
+        }
+
+        function handleModalSubmit(e) {
+            e.preventDefault();
+            submitModalToWhatsApp();
+        }
+
+        // Show Toast Notification with custom message support
+        function showToast(customMsg) {
+            const toast = document.getElementById('toast');
+            if (customMsg) {
+                const toastSpan = toast.querySelector('span');
+                if (toastSpan) toastSpan.innerText = customMsg;
+            }
+            toast.classList.remove('translate-y-32', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-32', 'opacity-0');
+            }, 4000);
+        }
+
+        // Gallery Lightbox Handlers
+        function openLightbox(src, caption) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-caption').innerText = caption;
+            document.getElementById('lightbox').classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+        }
+    </script>
+</body>
+
+</html>
